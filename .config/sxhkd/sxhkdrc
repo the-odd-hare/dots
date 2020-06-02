@@ -8,6 +8,9 @@ alt + a
 alt + s
     pactl set-sink-volume 0 +10%
 
+alt + shift + a 
+    /home/milosh/software/aseprite/aseprite
+
 # terminal emulator
 alt + Return
 	urxvt

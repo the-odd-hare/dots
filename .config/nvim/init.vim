@@ -64,5 +64,5 @@ vmap      <leader><TAB> :Tabularize /
 
 nnoremap <leader>b :ls<CR>:b
 nnoremap <leader>w :%s/\s\+$//e <CR>
-nnoremap <leader>t :NERTreeToggle <CR>
+nnoremap <leader>t :NERDTreeToggle <CR>
 "}}}
