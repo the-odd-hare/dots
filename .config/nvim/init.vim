@@ -39,6 +39,7 @@ set backspace=2                            " Make backspace behave correctly
 set encoding=utf-8
 set grepprg=ack
 set formatprg=par
+set relativenumber
 
 let NERDTreeIgnore = ['\.meta$', '\.cs.meta$', '\.asset$']
 " }}}
