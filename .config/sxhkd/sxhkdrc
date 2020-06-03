@@ -2,6 +2,9 @@
 # wm independent hotkeys
 #
 
+alt + t
+    /home/milosh/scripts/time
+
 alt + a
     pactl set-sink-volume 0 -10%
 

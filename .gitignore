@@ -11,7 +11,7 @@
 !.config/bspwm/bspwmrc
 !.config/sxhkd
 !.config/sxhkd/sxhkdrc
-!.config/picom.conf
+!.config/compton.conf
 !.config/Xmodmap
 !.config/Xresoures
 !.config/redshift.conf
