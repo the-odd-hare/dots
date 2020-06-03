@@ -4,6 +4,7 @@
 !.rtorrent.rc
 !.tmux.conf
 !.gitignore
+!.vimrc
 !.config/
 !.config/bspwm
 !.config/bspwm/wallpapers
@@ -16,5 +17,3 @@
 !.config/kitty
 !.config/kitty/kitty.conf
 !.config/redshift.conf
-!.config/nvim
-!.config/nvim/init.vim

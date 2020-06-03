@@ -1,33 +1,29 @@
-#
 # wm independent hotkeys
-#
-alt + ctrl + t
-    /home/milosh/scripts/time
 
+# Volume control
 alt + a
     pactl set-sink-volume 0 -10%
 
 alt + s
     pactl set-sink-volume 0 +10%
 
+# Program launcing
+alt + Return
+    kitty
+
 alt + shift + a 
     /home/milosh/software/aseprite/aseprite
 
-# terminal emulator
-alt + Return
-    kitty
+alt + f
+    /home/milosh/software/firefox/firefox
+
+alt + p
+    dmenu_run -fn 'PTMono-10'
 
 
 alt + ctrl + shift + l
     systemctl suspend
 
-# launch firefox
-alt + f
-	/home/milosh/software/firefox/firefox
-
-# program launcher
-alt + p
-	dmenu_run -fn 'PTMono-10'
 
 # make sxhkd reload its configuration files:
 alt + Escape
