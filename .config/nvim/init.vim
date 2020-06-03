@@ -49,7 +49,7 @@ let NERDTreeIgnore = ['\.meta$', '\.cs.meta$', '\.asset$']
 syntax enable                              " Enable syntax highlighting
 colorscheme gruvbox                        " Set default colorscheme
 set background=dark                        " Set colours for dark background
-"set termguicolors                        
+set termguicolors                        
 " }}}
 
 " Custom Binds

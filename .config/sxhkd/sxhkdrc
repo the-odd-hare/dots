@@ -1,7 +1,6 @@
 #
 # wm independent hotkeys
 #
-
 alt + t
     /home/milosh/scripts/time
 
@@ -16,7 +15,8 @@ alt + shift + a
 
 # terminal emulator
 alt + Return
-	urxvt
+    kitty
+
 
 alt + ctrl + shift + l
     systemctl suspend

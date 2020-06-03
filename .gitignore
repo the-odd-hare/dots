@@ -11,10 +11,10 @@
 !.config/bspwm/bspwmrc
 !.config/sxhkd
 !.config/sxhkd/sxhkdrc
-!.config/compton.conf
 !.config/Xmodmap
 !.config/Xresoures
+!.config/kitty
+!.config/kitty/kitty.conf
 !.config/redshift.conf
-!.config/picom.conf
 !.config/nvim
 !.config/nvim/init.vim
