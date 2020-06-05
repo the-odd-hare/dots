@@ -16,6 +16,7 @@ Plugin 'godlygeek/tabular'                 " Text aligning
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'morhetz/gruvbox'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on                  "}}}
@@ -48,6 +49,10 @@ let NERDTreeIgnore = ['\.meta$', '\.cs.meta$', '\.asset$']
 
 " Visual
 " {{{
+if exists('$TMUX')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 syntax enable                              " Enable syntax highlighting
 colorscheme gruvbox                        " Set default colorscheme
 set background=dark                        " Set colours for dark background

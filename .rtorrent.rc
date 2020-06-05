@@ -24,23 +24,19 @@ execute.throw = sh, -c, (cat,\
     "\"",(cfg.watch),"/load\" ",\
     "\"",(cfg.watch),"/start\" ")
 
-
 ## Listening port for incoming peer traffic (fixed; you can also randomize it)
-network.port_range.set = 50000-50000
+network.port_range.set = 49164-50000
 network.port_random.set = yes
-
 
 ## Tracker-less torrent and UDP tracker support
 ## (conservative settings for 'private' trackers, change for 'public')
-## dht.mode.set = disable
-protocol.pex.set = no
+#dht.mode.set = auto
+protocol.pex.set = yes
 trackers.use_udp.set = yes
-
 
 ## Peer settings
 throttle.max_uploads.set = 100
 throttle.max_uploads.global.set = 250
-
 throttle.min_peers.normal.set = 20
 throttle.max_peers.normal.set = 60
 throttle.min_peers.seed.set = 30
@@ -48,7 +44,6 @@ throttle.max_peers.seed.set = 80
 trackers.numwant.set = 80
 
 protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
-
 
 ## Limits for file handle resources, this is optimized for
 ## an `ulimit` of 1024 (a common default). You MUST leave
@@ -79,12 +74,6 @@ system.umask.set = 0027
 system.cwd.set = (directory.default)
 network.http.dns_cache_timeout.set = 25
 schedule2 = monitor_diskspace, 15, 60, ((close_low_diskspace, 1000M))
-#pieces.hash.on_completion.set = no
-#view.sort_current = seeding, greater=d.ratio=
-#keys.layout.set = qwerty
-#network.http.capath.set = "/etc/ssl/certs"
-#network.http.ssl_verify_peer.set = 0
-#network.http.ssl_verify_host.set = 0
 
 
 ## Some additional values and commands
@@ -102,20 +91,5 @@ schedule2 = watch_load, 11, 10, ((load.verbose, (cat, (cfg.watch), "load/*.torre
 ## Add & download straight away
 schedule2 = watch_start, 10, 10, ((load.start_verbose, (cat, (cfg.watch), "start/*.torrent")))
 
-
-## Run the rTorrent process as a daemon in the background
-## (and control via XMLRPC sockets)
-#system.daemon.set = true
-#network.scgi.open_local = (cat,(session.path),rpc.socket)
-#execute.nothrow = chmod,770,(cat,(session.path),rpc.socket)
-
-
-## Logging:
-##   Levels = critical error warn notice info debug
-##   Groups = connection_* dht_* peer_* rpc_* storage_* thread_* tracker_* torrent_*
-print = (cat, "Logging to ", (cfg.logfile))
-log.open_file = "log", (cfg.logfile)
-log.add_output = "info", "log"
-#log.add_output = "tracker_debug", "log"
 
 ### END of rtorrent.rc ###
