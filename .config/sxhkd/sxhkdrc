@@ -1,13 +1,11 @@
 # wm independent hotkeys
 
-# Volume control
 alt + a
-    pactl set-sink-volume 0 -10%
+    pactl set-sink-volume 0 -5%
 
 alt + s
-    pactl set-sink-volume 0 +10%
+    pactl set-sink-volume 0 +5%
 
-# Program launcing
 alt + shift + Return
     kitty
 
@@ -18,14 +16,11 @@ alt + shift + f
     /home/milosh/software/firefox/firefox
 
 alt + p
-    dmenu_run -fn 'PTMono-10'
-
+    rofi -show run -font 'PT Mono Bold 10'
 
 alt + ctrl + shift + z
     systemctl suspend
 
-
-# make sxhkd reload its configuration files:
 alt + Escape
 	pkill -USR1 -x sxhkd
 
