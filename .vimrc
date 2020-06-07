@@ -23,7 +23,8 @@ filetype plugin indent on                  "}}}
 
 " General Settings
 " {{{
-set colorcolumn=80
+set colorcolumn=100
+set textwidth=99
 set tabstop=4                              " Default tab width
 set shiftwidth=4                           " Default indent width for >>
 set expandtab                              " Replace tab with spaces
@@ -41,7 +42,7 @@ set showmode                               " Show current mode in status line
 set backspace=2                            " Make backspace behave correctly
 set encoding=utf-8
 set grepprg=ack
-set formatprg=par
+"set formatprg=par
 set relativenumber
 
 let NERDTreeIgnore = ['\.meta$', '\.cs.meta$', '\.asset$']
@@ -56,7 +57,7 @@ endif
 syntax enable                              " Enable syntax highlighting
 colorscheme gruvbox                        " Set default colorscheme
 set background=dark                        " Set colours for dark background
-set termguicolors                        
+set termguicolors
 " }}}
 
 " Custom Binds
