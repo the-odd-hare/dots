@@ -1,9 +1,7 @@
-" Vundle config & Plugins
 " Vundle install:
-"
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
-" {{{
+" Vundle config & Plugins "{{{
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -17,12 +15,15 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'morhetz/gruvbox'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'rust-lang/rust.vim'
+Plugin 'dense-analysis/ale'
+Plugin 'ycm-core/YouCompleteMe'
 
 call vundle#end()
-filetype plugin indent on                  "}}}
+filetype plugin indent on
+"}}}
 
-" General Settings
-" {{{
+" General Settings {{{
 set colorcolumn=100
 set textwidth=99
 set tabstop=4                              " Default tab width
@@ -42,26 +43,24 @@ set showmode                               " Show current mode in status line
 set backspace=2                            " Make backspace behave correctly
 set encoding=utf-8
 set grepprg=ack
-"set formatprg=par
+set formatprg=par
 set relativenumber
 
 let NERDTreeIgnore = ['\.meta$', '\.cs.meta$', '\.asset$']
 " }}}
 
-" Visual
-" {{{
+" Visual {{{
 if exists('$TMUX')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 syntax enable                              " Enable syntax highlighting
 colorscheme gruvbox                        " Set default colorscheme
-set background=dark                        " Set colours for dark background
+set background=light                       " Set colours for dark background
 set termguicolors
 " }}}
 
-" Custom Binds
-" {{{
+" Custom Binds {{{
 " Remap leader key to space
 nnoremap <SPACE> <NOP>
 let mapleader="\<SPACE>"
