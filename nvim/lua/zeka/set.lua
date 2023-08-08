@@ -12,7 +12,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = "Users/zecev/AppData/Local/nvim_undo_dir" 
+--vim.opt.undodir = ~/.vim/undodir 
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
